@@ -50,6 +50,16 @@ h1 {
 .campaign-details li {
     margin-bottom: 10px;
     font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.campaign-details ul ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.campaign-details ul ul li {
+    margin-bottom: 8px;
 }
 
 .wheel-container {
@@ -186,7 +196,8 @@ h1 {
 .logo-container {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logo {
