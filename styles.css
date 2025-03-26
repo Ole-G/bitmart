@@ -184,13 +184,12 @@ h1 {
 }
 
 .logo-container {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 1000;
 }
 
 .logo {
-    height: 40px; /* Adjust this value based on your needs */
+    height: 40px;
     width: auto;
 }
