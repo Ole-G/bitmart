@@ -1,0 +1,184 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #00c4ff;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.campaign-details {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.campaign-details h2 {
+    font-size: 1.5em;
+    color: #00c4ff;
+    margin-bottom: 10px;
+}
+
+.campaign-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.campaign-details li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.wheel-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.wheel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        #ffcc00 0deg 45deg,
+        #00c4ff 45deg 90deg,
+        #ffcc00 90deg 135deg,
+        #00c4ff 135deg 180deg,
+        #ffcc00 180deg 225deg,
+        #00c4ff 225deg 270deg,
+        #ffcc00 270deg 315deg,
+        #00c4ff 315deg 360deg
+    );
+    transition: transform 3s ease-out;
+}
+
+.wheel-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform: rotate(calc(45deg * var(--i) + 22.5deg));
+}
+
+.wheel-section span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -500%) rotate(calc(-45deg * var(--i) - 22.5deg));
+    text-align: center;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #fff;
+    white-space: normal;
+    max-width: 70px;
+}
+
+/* Special case for the cashback text */
+.wheel-section:nth-child(5) span {
+    transform: translate(-50%, -400%) rotate(calc(-45deg * var(--i) - 22.5deg));
+    font-size: 0.7em;
+}
+
+/* Special case for the BTC text */
+.wheel-section:nth-child(6) span {
+    transform: translate(-50%, -850%) rotate(calc(-45deg * var(--i) - 22.5deg));
+}
+
+.wheel-pointer {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid #ff0000;
+}
+
+.spin-section {
+    margin: 20px 0;
+}
+
+#remaining-spins {
+    font-size: 1.2em;
+    color: #00c4ff;
+}
+
+#spin-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #00c4ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#spin-button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+.referral-section {
+    margin-top: 30px;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.referral-section h2 {
+    font-size: 1.5em;
+    color: #00c4ff;
+    margin-bottom: 10px;
+}
+
+.referral-section p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.referral-section button {
+    padding: 8px 15px;
+    background-color: #00c4ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

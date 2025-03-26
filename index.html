@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin to Win: BitMart's Monthly Fortune</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Spin to Win: BitMart's Monthly Fortune 🚀</h1>
+        <p class="subtitle">April 1 - April 14, 2025</p>
+
+        <!-- Campaign Details -->
+        <div class="campaign-details">
+            <h2>How to Participate</h2>
+            <ul>
+                <li><strong>New Users:</strong> Register & complete KYC to get 1 free spin. Make a $10 spot trade to claim your reward!</li>
+                <li><strong>Earn More Spins:</strong>
+                    <ul>
+                        <li>Trade $500 in spot markets = 1 spin (max 5 spins).</li>
+                        <li>Refer a friend who registers, completes KYC, and trades $10 = 1 spin (max 5 spins).</li>
+                    </ul>
+                </li>
+                <li><strong>Grand Prize:</strong> Earn 3+ spins to enter a lucky draw for 0.1 BTC!</li>
+            </ul>
+        </div>
+
+        <!-- Wheel Section -->
+        <div class="wheel-container">
+            <div class="wheel" id="wheel">
+                <div class="wheel-section" style="--i: 0;"><span>5 USDT Bonus</span></div>
+                <div class="wheel-section" style="--i: 1;"><span>10 USDT Bonus</span></div>
+                <div class="wheel-section" style="--i: 2;"><span>15 USDT Bonus</span></div>
+                <div class="wheel-section" style="--i: 3;"><span>20 USDT Bonus</span></div>
+                <div class="wheel-section" style="--i: 4;"><span>10% Cashback (7 Days)</span></div>
+                <div class="wheel-section" style="--i: 5;"><span>0.001 BTC</span></div>
+                <div class="wheel-section" style="--i: 6;"><span>50 BMX Tokens</span></div>
+                <div class="wheel-section" style="--i: 7;"><span>100 BMX Tokens</span></div>
+            </div>
+            <div class="wheel-pointer"></div>
+        </div>
+
+        <!-- Spin Button and Remaining Spins -->
+        <div class="spin-section">
+            <p>Remaining Spin(s): <span id="remaining-spins">0</span></p>
+            <button id="spin-button" disabled>Spin Now!</button>
+        </div>
+
+        <!-- Result Display -->
+        <div class="result" id="result">
+            <p>Spin the wheel to win exciting rewards!</p>
+        </div>
+
+        <!-- Referral Link -->
+        <div class="referral-section">
+            <h2>Invite Friends & Earn More Spins!</h2>
+            <p>Your Referral Link: <span id="referral-link">https://bitmart.com/referral/abc123</span></p>
+            <button onclick="copyReferralLink()">Copy Link</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
