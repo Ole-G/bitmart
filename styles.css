@@ -182,3 +182,15 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.logo-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.logo {
+    height: 40px; /* Adjust this value based on your needs */
+    width: auto;
+}
